@@ -1,0 +1,53 @@
+{
+    "Configurations":{
+        "NameSpace":"VodServices",
+        "Registered":[
+            {
+                "Id":"resourceServlet",
+                "Class":"WebServices::ResourceServlet",
+                "IncludePath": "Servlet/ResourceServlet.h",
+                "Interface":"Magic::NetWork::Http::IHttpServlet",
+                "Dependencies":["Magic::Config"],
+                "FunctionPropertys":[]
+            },
+            {
+                "Id":"movieListServlet",
+                "Class":"WebServices::MovieListServlet",
+                "IncludePath": "Servlet/MovieListServlet.h",
+                "Interface":"Magic::NetWork::Http::IHttpServlet",
+                "Dependencies":["Magic::DataBase::ConnectionPool<pqxx::connection>"],
+                "FunctionPropertys":[]
+            },
+            {
+                "Id":"movieMenuServlet",
+                "Class":"WebServices::MovieMenuServlet",
+                "IncludePath": "Servlet/MovieMenuServlet.h",
+                "Interface":"Magic::NetWork::Http::IHttpServlet",
+                "Dependencies":["Magic::DataBase::ConnectionPool<pqxx::connection>"],
+                "FunctionPropertys":[]
+            },
+            {
+                "Id":"movieDetailsServlet",
+                "Class":"WebServices::MovieDetailsServlet",
+                "IncludePath": "Servlet/MovieDetailsServlet.h",
+                "Interface":"Magic::NetWork::Http::IHttpServlet",
+                "Dependencies":["Magic::DataBase::ConnectionPool<pqxx::connection>"],
+                "FunctionPropertys":[]
+            },
+            {
+                "Id":"addMovieServlet",
+                "Class":"WebServices::AddMovieServlet",
+                "IncludePath": "Servlet/AddMovieServlet.h",
+                "Interface":"Magic::NetWork::Http::IHttpServlet",
+                "Dependencies":["Magic::DataBase::ConnectionPool<pqxx::connection>"],
+                "FunctionPropertys":[]
+            }
+        ],
+        "Initialize":[
+        ],
+        "Constructor":{
+            "Name":"Initialize",
+            "WithParameter": true
+        }
+    }
+}
